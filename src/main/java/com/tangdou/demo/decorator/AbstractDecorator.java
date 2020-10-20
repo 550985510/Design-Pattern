@@ -1,6 +1,7 @@
 package com.tangdou.demo.decorator;
 
 /**
+ * 装饰器模板
  * @author 崔航
  * @date 2020/9/15 10:23
  */

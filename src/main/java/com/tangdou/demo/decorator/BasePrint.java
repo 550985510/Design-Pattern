@@ -1,8 +1,7 @@
 package com.tangdou.demo.decorator;
 
-import org.springframework.stereotype.Service;
-
 /**
+ * 被装饰者
  * @author 崔航
  * @date 2020/9/15 10:18
  */

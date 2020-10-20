@@ -1,7 +1,5 @@
 package com.tangdou.demo.strategy;
 
-import org.springframework.stereotype.Component;
-
 /**
  * 策略模式
  * 定义策略及封装算法，调用者决定使用哪种策略
