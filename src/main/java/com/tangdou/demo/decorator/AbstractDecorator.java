@@ -7,7 +7,7 @@ package com.tangdou.demo.decorator;
  */
 public abstract class AbstractDecorator implements PrintComponent {
 
-    private PrintComponent printComponent;
+    private final PrintComponent printComponent;
 
     public AbstractDecorator(PrintComponent printComponent) {
         this.printComponent = printComponent;

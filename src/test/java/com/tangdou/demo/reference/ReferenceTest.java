@@ -6,7 +6,7 @@ import java.lang.ref.WeakReference;
  * 1.强引用：StrongReference引用指向对象，gc运行时不回收。
  * 2.软引用：SoftReference，gc运行时可能回收（jvm内存不够时）。
  * 3.弱引用：WeakReference，gc运行时立即回收。
- * 4.虚引用:PhauntomReference，类似于无引用，主要用于跟踪对象被回收的状态，不能单独使用，必须与引用队列
+ * 4.虚引用:PhantomReference，类似于无引用，主要用于跟踪对象被回收的状态，不能单独使用，必须与引用队列
  * @author 崔航
  * @date 2020/10/12 10:47
  */
