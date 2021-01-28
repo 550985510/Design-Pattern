@@ -1,8 +1,8 @@
-package com.tangdou.demo.factory;
+package com.tangdou.demo.factory.shape;
 
-import com.tangdou.demo.factory.shape.Circular;
-import com.tangdou.demo.factory.shape.Rectangle;
-import com.tangdou.demo.factory.shape.Square;
+import com.tangdou.demo.factory.shape.product.Circular;
+import com.tangdou.demo.factory.shape.product.Rectangle;
+import com.tangdou.demo.factory.shape.product.Square;
 import lombok.Getter;
 
 /**

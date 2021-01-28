@@ -1,8 +1,7 @@
-package com.tangdou.demo.factory;
+package com.tangdou.demo.factory.shape;
 
+import com.tangdou.demo.abstractFactory.AbstractFactoryMould;
 import org.springframework.stereotype.Component;
-
-import java.lang.reflect.InvocationTargetException;
 
 /**
  * 形状工厂 生产形状
@@ -10,8 +9,13 @@ import java.lang.reflect.InvocationTargetException;
  * @date 2021/1/28 15:38
  */
 @Component
-public class ShapeFactory {
+public class ShapeFactory extends AbstractFactoryMould<Shape, ShapeEnum> {
 
+    public ShapeFactory() {
+        super();
+    }
+
+    @Override
     public Shape produce(ShapeEnum type) {
         try {
             //只可用于无参构造函数
@@ -20,5 +24,10 @@ public class ShapeFactory {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("我是抽象工厂生产的形状工厂");
     }
 }

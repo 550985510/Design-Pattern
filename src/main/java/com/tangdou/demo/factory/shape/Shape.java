@@ -1,4 +1,4 @@
-package com.tangdou.demo.factory;
+package com.tangdou.demo.factory.shape;
 
 /**
  * 形状接口

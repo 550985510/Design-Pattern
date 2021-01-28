@@ -1,6 +1,6 @@
-package com.tangdou.demo.factory.shape;
+package com.tangdou.demo.factory.shape.product;
 
-import com.tangdou.demo.factory.AbstractShapeMould;
+import com.tangdou.demo.factory.shape.AbstractShapeMould;
 
 /**
  * 圆形

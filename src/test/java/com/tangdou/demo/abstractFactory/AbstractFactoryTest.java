@@ -1,5 +1,7 @@
-package com.tangdou.demo.factory;
+package com.tangdou.demo.abstractFactory;
 
+import com.tangdou.demo.factory.color.Color;
+import com.tangdou.demo.factory.color.ColorEnum;
 import com.tangdou.demo.factory.shape.Shape;
 import com.tangdou.demo.factory.shape.ShapeEnum;
 import com.tangdou.demo.factory.shape.ShapeFactory;
@@ -18,13 +20,14 @@ import javax.annotation.Resource;
 @Slf4j
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
-public class FactoryTest {
+public class AbstractFactoryTest {
 
     @Resource
-    private ShapeFactory shapeFactory;
+    private FactoryProducer factoryProducer;
 
     @Test
     public void test() {
-        Shape produce = shapeFactory.produce(ShapeEnum.CIRCULAR);
+        Factory<Color, ColorEnum> colorFactory = factoryProducer.produce(FactoryEnum.COLOR);
+        colorFactory.produce(ColorEnum.BLUE);
     }
 }
