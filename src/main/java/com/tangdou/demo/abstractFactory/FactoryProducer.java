@@ -8,12 +8,13 @@ import org.springframework.stereotype.Component;
  * @date 2021/1/28 17:44
  */
 @Component
-public class FactoryProducer {
+public class FactoryProducer<P, E> {
 
-    public Factory produce(FactoryEnum factoryType) {
+    @SuppressWarnings("unchecked")
+    public Factory<P, E> produce(FactoryEnum factoryType) {
         try {
             //只可用于无参构造函数
-            return (AbstractFactoryMould) factoryType.getType().newInstance();
+            return (Factory<P, E>) factoryType.getType().newInstance();
         } catch (InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
         }

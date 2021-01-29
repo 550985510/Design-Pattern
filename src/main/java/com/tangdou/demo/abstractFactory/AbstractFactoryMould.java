@@ -11,11 +11,4 @@ public abstract class AbstractFactoryMould<P, E> implements Factory<P, E> {
         print();
     }
 
-    /**
-     * 生产
-     * @param e 产品类型枚举
-     * @return 产品
-     */
-    @Override
-    public abstract P produce(E e);
 }

@@ -2,9 +2,6 @@ package com.tangdou.demo.abstractFactory;
 
 import com.tangdou.demo.factory.color.Color;
 import com.tangdou.demo.factory.color.ColorEnum;
-import com.tangdou.demo.factory.shape.Shape;
-import com.tangdou.demo.factory.shape.ShapeEnum;
-import com.tangdou.demo.factory.shape.ShapeFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +20,7 @@ import javax.annotation.Resource;
 public class AbstractFactoryTest {
 
     @Resource
-    private FactoryProducer factoryProducer;
+    private FactoryProducer<Color, ColorEnum> factoryProducer;
 
     @Test
     public void test() {
