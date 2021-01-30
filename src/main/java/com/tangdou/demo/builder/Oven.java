@@ -17,6 +17,9 @@ public class Oven {
     }
 
     public Cookies baking(Integer number) {
-        return new Cookies(number);
+        return cookiesBuilder
+                .shape()
+                .color()
+                .build(number);
     }
 }

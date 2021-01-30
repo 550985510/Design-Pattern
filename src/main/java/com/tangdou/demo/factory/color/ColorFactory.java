@@ -1,8 +1,6 @@
 package com.tangdou.demo.factory.color;
 
-import com.tangdou.demo.abstractFactory.AbstractFactoryMould;
-import com.tangdou.demo.factory.shape.Shape;
-import com.tangdou.demo.factory.shape.ShapeEnum;
+import com.tangdou.demo.abstracted.factory.AbstractFactoryMould;
 import org.springframework.stereotype.Component;
 
 /**

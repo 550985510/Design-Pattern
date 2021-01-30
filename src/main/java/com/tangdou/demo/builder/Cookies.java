@@ -1,9 +1,8 @@
 package com.tangdou.demo.builder;
 
 import com.tangdou.demo.factory.color.Color;
-import com.tangdou.demo.factory.color.product.Red;
 import com.tangdou.demo.factory.shape.Shape;
-import com.tangdou.demo.factory.shape.product.Circular;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
@@ -13,6 +12,7 @@ import lombok.Data;
  * @date 2021/1/29 17:30
  */
 @Data
+@AllArgsConstructor
 @Builder(builderMethodName ="hiddenBuilder")
 public class Cookies {
 

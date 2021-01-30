@@ -1,4 +1,4 @@
-package com.tangdou.demo.abstractFactory;
+package com.tangdou.demo.abstracted.factory;
 
 import com.tangdou.demo.factory.color.ColorFactory;
 import com.tangdou.demo.factory.shape.ShapeFactory;

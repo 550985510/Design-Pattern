@@ -1,4 +1,4 @@
-package com.tangdou.demo.abstractFactory;
+package com.tangdou.demo.abstracted.factory;
 
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
 package com.tangdou.demo.factory.shape;
 
-import com.tangdou.demo.abstractFactory.AbstractFactoryMould;
+import com.tangdou.demo.abstracted.factory.AbstractFactoryMould;
 import org.springframework.stereotype.Component;
 
 /**

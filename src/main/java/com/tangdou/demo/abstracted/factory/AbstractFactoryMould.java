@@ -1,4 +1,4 @@
-package com.tangdou.demo.abstractFactory;
+package com.tangdou.demo.abstracted.factory;
 
 /**
  * 抽象工厂模具
