@@ -11,6 +11,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * 变种builder模式测试类
+ * 相较于传统builder模式省略了director角色，将构造算法交给client（客户）
+ * 将builder写到需要构建的实体类中采用链式调用
  * @author 崔航
  * @date 2021/1/29 17:33
  */
