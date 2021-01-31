@@ -4,9 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tangdou.demo</groupId>
+    <groupId>com.com.tangdou.demo</groupId>
     <artifactId>Design-Pattern</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>factory-pattern</module>
+        <module>abstract-factory-pattern</module>
+        <module>singleton-pattern</module>
+        <module>builder-pattern</module>
+        <module>decorator-pattern</module>
+        <module>strategy-pattern</module>
+        <module>001-core</module>
+        <module>builder-pattern-demo</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

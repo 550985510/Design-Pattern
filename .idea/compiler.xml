@@ -2,17 +2,37 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Design-Pattern" />
+        <module name="decorator-pattern" />
+        <module name="builder-pattern" />
+        <module name="singleton-pattern" />
+        <module name="strategy-pattern" />
+        <module name="001-core" />
+        <module name="builder-pattern-demo" />
+        <module name="abstract-factory-pattern" />
+        <module name="factory-pattern" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="01-factory-pattern" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="001-core" options="-parameters" />
+      <module name="01-factory-pattern" options="-parameters" />
       <module name="Design-Pattern" options="-parameters" />
+      <module name="abstract-factory-pattern" options="-parameters" />
+      <module name="builder-pattern" options="-parameters" />
+      <module name="builder-pattern-demo" options="-parameters" />
+      <module name="decorator-pattern" options="-parameters" />
+      <module name="factory-pattern" options="-parameters" />
+      <module name="singleton-pattern" options="-parameters" />
+      <module name="strategy-pattern" options="-parameters" />
     </option>
   </component>
 </project>
