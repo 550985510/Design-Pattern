@@ -25,7 +25,7 @@ public class DynamicLoad {
 class Office {
     static void run(String className) {
         try {
-            String packageName = "com.com.tangdou.demo.dynamicLoad.";
+            String packageName = "com.tangdou.demo.dynamicLoad.";
             Class<?> c = Class.forName(packageName + className);
             OfficeFamily officeFamily = (OfficeFamily) c.newInstance();
             officeFamily.doSth();

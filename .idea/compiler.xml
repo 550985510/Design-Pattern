@@ -7,17 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bridge-pattern" />
-        <module name="001-core" />
-        <module name="abstract-factory-pattern" />
-        <module name="adapter-pattern" />
-        <module name="factory-pattern" />
         <module name="decorator-pattern" />
-        <module name="prototype-pattern" />
-        <module name="singleton-pattern" />
-        <module name="builder-pattern-demo" />
-        <module name="strategy-pattern" />
+        <module name="bridge-pattern" />
+        <module name="adapter-pattern-class" />
         <module name="builder-pattern" />
+        <module name="factory-pattern" />
+        <module name="strategy-pattern" />
+        <module name="001-core" />
+        <module name="singleton-pattern" />
+        <module name="adapter-pattern" />
+        <module name="builder-pattern-demo" />
+        <module name="abstract-factory-pattern" />
+        <module name="prototype-pattern" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,6 +32,7 @@
       <module name="Design-Pattern" options="-parameters" />
       <module name="abstract-factory-pattern" options="-parameters" />
       <module name="adapter-pattern" options="-parameters" />
+      <module name="adapter-pattern-class" options="-parameters" />
       <module name="bridge-pattern" options="-parameters" />
       <module name="builder-pattern" options="-parameters" />
       <module name="builder-pattern-demo" options="-parameters" />
