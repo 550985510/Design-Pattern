@@ -1,14 +1,16 @@
 package com.tangdou.bridge.payment;
 
+import com.tangdou.bridge.payment.param.PaymentParam;
+
 /**
  * @author 崔航
  * @date 2021/2/1 17:46
  */
-public abstract class AbstractPaymentMethod<T> {
+public abstract class AbstractPaymentMethod {
 
-    protected T param;
+    protected PaymentParam param;
 
-    public AbstractPaymentMethod(T param) {
+    public AbstractPaymentMethod(PaymentParam param) {
         this.param = param;
     }
 

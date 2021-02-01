@@ -1,11 +1,13 @@
 package com.tangdou.bridge.payment;
 
+import com.tangdou.bridge.payment.param.Password;
+
 /**
  * 密码支付
  * @author 崔航
  * @date 2021/2/1 18:00
  */
-public class PasswordPay extends AbstractPaymentMethod<Password> {
+public class PasswordPay extends AbstractPaymentMethod {
 
     private final static Password PASSWORD = new Password("123456");
 
@@ -29,6 +31,6 @@ public class PasswordPay extends AbstractPaymentMethod<Password> {
      */
     @Override
     public Boolean verify() {
-        return PASSWORD.getValue().equals(this.param.getValue());
+        return PASSWORD.getValue().equals(((Password) this.param).getValue());
     }
 }

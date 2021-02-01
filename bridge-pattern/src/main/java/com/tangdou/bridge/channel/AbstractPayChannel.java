@@ -9,14 +9,14 @@ import java.math.BigDecimal;
  * @author 崔航
  * @date 2021/2/1 17:52
  */
-public abstract class AbstractPayChannel<T> {
+public abstract class AbstractPayChannel {
 
     /**
      * 支付方式
      */
-    protected AbstractPaymentMethod<T> paymentMethod;
+    protected AbstractPaymentMethod paymentMethod;
 
-    public AbstractPayChannel(AbstractPaymentMethod<T> paymentMethod) {
+    public AbstractPayChannel(AbstractPaymentMethod paymentMethod) {
         this.paymentMethod = paymentMethod;
     }
 
@@ -28,12 +28,14 @@ public abstract class AbstractPayChannel<T> {
      */
     abstract void doPay(Long userId, BigDecimal amount, String account);
 
-    void pay(Long userId, BigDecimal amount, String account) {
+    public void pay(Long userId, BigDecimal amount, String account) {
         if (this.verify()) {
-            System.out.print(paymentMethod.name() + "校验通过，");
+            System.out.println(paymentMethod.name() + "校验通过");
             this.doPay(userId, amount, account);
-            System.out.print("支付成功");
+            System.out.println("支付成功");
+            return;
         }
+        System.out.println(paymentMethod.name() + "校验失败，无法进行交易");
     }
 
     Boolean verify() {

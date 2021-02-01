@@ -1,4 +1,4 @@
-package com.tangdou.bridge.payment;
+package com.tangdou.bridge.payment.param;
 
 import lombok.Data;
 
@@ -8,8 +8,11 @@ import lombok.Data;
  * @date 2021/2/1 17:50
  */
 @Data
-public class Password {
+public class Password implements PaymentParam {
 
+    /**
+     * 密码
+     */
     private String value;
 
     public Password(String value) {
