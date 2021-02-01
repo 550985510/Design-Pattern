@@ -20,6 +20,14 @@ public class AuthorTest {
     public void getAuthor() {
         Author author = Author.getInstance();
         log.info("{}", author.getName());
+        LazyAuthor instance = LazyAuthor.getInstance();
+        log.info("{}", instance.getName());
+        LazyAuthor instanceSecured = LazyAuthor.getInstanceSecured();
+        log.info("{}", instanceSecured.getName());
+        LazyAuthor instanceByNestedClass = LazyAuthor.getInstanceByNestedClass();
+        log.info("{}", instanceByNestedClass.getName());
+        LazyAuthor instanceByCas = LazyAuthor.getInstanceByCas();
+        log.info("{}", instanceByCas.getName());
     }
 
     @Test
