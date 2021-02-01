@@ -15,6 +15,7 @@
         <module name="singleton-pattern" />
         <module name="builder-pattern-demo" />
         <module name="strategy-pattern" />
+        <module name="adapter-pattern-class" />
         <module name="builder-pattern" />
       </profile>
     </annotationProcessing>
@@ -28,6 +29,7 @@
       <module name="01-factory-pattern" options="-parameters" />
       <module name="Design-Pattern" options="-parameters" />
       <module name="abstract-factory-pattern" options="-parameters" />
+      <module name="adapter-pattern-class" options="-parameters" />
       <module name="builder-pattern" options="-parameters" />
       <module name="builder-pattern-demo" options="-parameters" />
       <module name="decorator-pattern" options="-parameters" />
