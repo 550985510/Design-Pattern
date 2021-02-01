@@ -18,7 +18,7 @@
         <module>001-core</module>
         <module>builder-pattern-demo</module>
         <module>prototype-pattern</module>
-        <module>adapter-pattern-class</module>
+        <module>adapter-pattern</module>
     </modules>
 
     <parent>
