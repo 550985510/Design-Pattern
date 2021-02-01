@@ -17,6 +17,7 @@
         <module>strategy-pattern</module>
         <module>001-core</module>
         <module>builder-pattern-demo</module>
+        <module>prototype-pattern</module>
     </modules>
 
     <parent>
