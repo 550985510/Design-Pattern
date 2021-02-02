@@ -1,4 +1,4 @@
-package com.tangdou.composite.user;
+package com.tangdou.composite.user.attribute;
 
 import lombok.Getter;
 
@@ -8,7 +8,7 @@ import lombok.Getter;
  * @date 2021/2/2 16:08
  */
 @Getter
-public enum AgeGroup implements UserAttribute {
+public enum AgeGroup implements AttributeEnum {
 
     /**
      * 年龄段

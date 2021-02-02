@@ -1,5 +1,7 @@
 package com.tangdou.composite.user;
 
+import com.tangdou.composite.user.attribute.Gender;
+import com.tangdou.composite.user.attribute.Occupation;
 import lombok.Data;
 
 /**
