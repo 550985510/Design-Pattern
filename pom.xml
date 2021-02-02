@@ -20,6 +20,7 @@
         <module>prototype-pattern</module>
         <module>adapter-pattern</module>
         <module>bridge-pattern</module>
+        <module>composite-pattern</module>
     </modules>
 
     <parent>
