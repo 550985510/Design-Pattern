@@ -12,8 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @date 2018/12/3 21:52
  */
 @Slf4j
-@SpringBootTest(classes = ApplicationStarter.class)
 @RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = ApplicationStarter.class)
 public class AuthorTest {
 
     @Test
