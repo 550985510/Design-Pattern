@@ -1,16 +1,15 @@
 package com.tangdou.responsibility.chain.porcess;
 
-import com.tangdou.responsibility.chain.approver.Lieutenant;
+import com.tangdou.responsibility.chain.approver.Colonel;
 import com.tangdou.responsibility.chain.programme.BaseProgramme;
 
 /**
- * 二级审批流程
  * @author 崔航
- * @date 2021/2/4 15:35
+ * @date 2021/2/4 16:00
  */
-public class SecondLevelProcess extends AbstractApprovalProcess<Lieutenant> {
+public class FourLevelProcess extends AbstractApprovalProcess<Colonel> {
 
-    public SecondLevelProcess(Lieutenant approver) {
+    public FourLevelProcess(Colonel approver) {
         super(approver);
     }
 
@@ -22,7 +21,6 @@ public class SecondLevelProcess extends AbstractApprovalProcess<Lieutenant> {
      */
     @Override
     protected boolean doApproval(BaseProgramme programme) {
-        //此处是处理逻辑
-        return true;
+        return false;
     }
 }
