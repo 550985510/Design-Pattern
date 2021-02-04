@@ -5,7 +5,7 @@ package com.tangdou.responsibility.chain.approver;
  * @author 崔航
  * @date 2021/2/4 15:59
  */
-public class Colonel extends Approver {
+public class Colonel extends AbstractApprover {
 
     public Colonel(String name) {
         super(name);

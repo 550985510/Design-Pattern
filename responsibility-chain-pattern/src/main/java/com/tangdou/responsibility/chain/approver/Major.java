@@ -5,7 +5,7 @@ package com.tangdou.responsibility.chain.approver;
  * @author 崔航
  * @date 2021/2/4 15:55
  */
-public class Major extends Approver {
+public class Major extends AbstractApprover {
 
     public Major(String name) {
         super(name);

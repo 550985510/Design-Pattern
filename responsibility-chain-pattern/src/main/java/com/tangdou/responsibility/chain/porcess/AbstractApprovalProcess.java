@@ -1,6 +1,6 @@
 package com.tangdou.responsibility.chain.porcess;
 
-import com.tangdou.responsibility.chain.approver.Approver;
+import com.tangdou.responsibility.chain.approver.AbstractApprover;
 import com.tangdou.responsibility.chain.programme.BaseProgramme;
 import lombok.Setter;
 import org.springframework.util.ObjectUtils;
@@ -11,10 +11,10 @@ import org.springframework.util.ObjectUtils;
  * @author 崔航
  * @date 2021/2/4 14:34
  */
-public abstract class AbstractApprovalProcess<T extends Approver> {
+public abstract class AbstractApprovalProcess<T extends AbstractApprover> {
 
     @Setter
-    protected AbstractApprovalProcess<? extends Approver> next;
+    protected AbstractApprovalProcess<? extends AbstractApprover> next;
 
     protected T approver;
 

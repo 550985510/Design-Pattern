@@ -5,7 +5,7 @@ package com.tangdou.responsibility.chain.approver;
  * @author 崔航
  * @date 2021/2/4 15:19
  */
-public class Monitor extends Approver {
+public class Monitor extends AbstractApprover {
 
     private final String adjective;
 

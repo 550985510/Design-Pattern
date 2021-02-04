@@ -25,6 +25,7 @@
         <module>flyweight-pattern</module>
         <module>proxy-pattern</module>
         <module>responsibility-chain-pattern</module>
+        <module>command-pattern</module>
     </modules>
 
     <parent>

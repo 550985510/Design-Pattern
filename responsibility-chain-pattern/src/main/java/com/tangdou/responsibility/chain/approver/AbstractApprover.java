@@ -5,11 +5,11 @@ package com.tangdou.responsibility.chain.approver;
  * @author 崔航
  * @date 2021/2/4 15:09
  */
-public abstract class Approver {
+public abstract class AbstractApprover {
 
     protected String name;
 
-    public Approver(String name) {
+    public AbstractApprover(String name) {
         this.name = name;
     }
 
