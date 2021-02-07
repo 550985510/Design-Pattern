@@ -10,5 +10,5 @@ public abstract class AbstractCook {
     /**
      * 烹饪
      */
-    abstract void cooking();
+    public abstract void cooking();
 }
