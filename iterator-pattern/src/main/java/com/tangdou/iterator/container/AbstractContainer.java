@@ -19,25 +19,25 @@ public abstract class AbstractContainer<T, E extends Iterator<T>> extends Abstra
      * 添加元素
      * @param element 元素
      */
-    abstract void add(T element);
+    public abstract void add(T element);
 
     /**
      * 向指定元素添加子元素
      * @param element 子元素
      * @param to 指定元素
      */
-    abstract void addTo(T element, T to);
+    public abstract void addTo(T element, T to);
 
     /**
      * 删除元素
      * @param element 元素
      */
-    abstract void remove(T element);
+    public abstract void remove(T element);
 
     /**
      * 从指定元素中移除子元素
      * @param element 子元素
      * @param from 指定元素
      */
-    abstract void removeFrom(T element, T from);
+    public abstract void removeFrom(T element, T from);
 }
