@@ -27,6 +27,7 @@
         <module>responsibility-chain-pattern</module>
         <module>command-pattern</module>
         <module>iterator-pattern</module>
+        <module>interpreter-pattern</module>
     </modules>
 
     <parent>
