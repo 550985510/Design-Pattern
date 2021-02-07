@@ -2,9 +2,8 @@ package com.tangdou.iterator.iterator;
 
 import com.tangdou.iterator.model.Node;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.ObjectUtils;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 /**
@@ -14,27 +13,11 @@ import java.util.Stack;
  */
 public class DepthFirstIterator extends Iterator<Node> {
 
-    private final List<Node> list = new ArrayList<>();
+    private final Stack<Node> stack = new Stack<>();
 
-    private int i = -1;
-
-    /**
-     * 初始化
-     *
-     * @param node 节点
-     */
-    @Override
-    public void init(Node node) {
-        Stack<Node> stack = new Stack<>();
-        stack.push(node);
-        while (!stack.empty()) {
-            Node pop = stack.pop();
-            list.add(pop);
-            if (CollectionUtils.isEmpty(pop.getChildren())) {
-                continue;
-            }
-            pop.getChildren().forEach(stack::push);
-        }
+    public DepthFirstIterator(Node root) {
+        super(root);
+        stack.push(root);
     }
 
     /**
@@ -44,8 +27,7 @@ public class DepthFirstIterator extends Iterator<Node> {
      */
     @Override
     public boolean hasNext() {
-        i = i + 1;
-        return i < list.size();
+        return !stack.empty();
     }
 
     /**
@@ -55,6 +37,10 @@ public class DepthFirstIterator extends Iterator<Node> {
      */
     @Override
     public Node next() {
-        return list.get(i);
+        Node pop = stack.pop();
+        if (!ObjectUtils.isEmpty(pop) && !CollectionUtils.isEmpty(pop.getChildren())) {
+            pop.getChildren().forEach(stack::push);
+        }
+        return pop;
     }
 }

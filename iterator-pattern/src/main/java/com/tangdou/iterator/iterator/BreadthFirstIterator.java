@@ -1,6 +1,11 @@
 package com.tangdou.iterator.iterator;
 
 import com.tangdou.iterator.model.Node;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.ObjectUtils;
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * @author 崔航
@@ -8,17 +13,13 @@ import com.tangdou.iterator.model.Node;
  */
 public class BreadthFirstIterator extends Iterator<Node> {
 
+    private final Queue<Node> queue = new LinkedList<>();
 
-    /**
-     * 初始化
-     *
-     * @param node 节点
-     * @return 迭代器
-     */
-    @Override
-    public void init(Node node) {
-
+    public BreadthFirstIterator(Node root) {
+        super(root);
+        queue.offer(root);
     }
+
 
     /**
      * 是否存在下一个元素
@@ -27,7 +28,7 @@ public class BreadthFirstIterator extends Iterator<Node> {
      */
     @Override
     public boolean hasNext() {
-        return false;
+        return !queue.isEmpty();
     }
 
     /**
@@ -37,6 +38,10 @@ public class BreadthFirstIterator extends Iterator<Node> {
      */
     @Override
     public Node next() {
-        return null;
+        Node poll = queue.poll();
+        if (!ObjectUtils.isEmpty(poll) && !CollectionUtils.isEmpty(poll.getChildren())) {
+            poll.getChildren().forEach(queue::offer);
+        }
+        return poll;
     }
 }

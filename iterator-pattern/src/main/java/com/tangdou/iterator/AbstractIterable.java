@@ -14,8 +14,7 @@ public abstract class AbstractIterable<T, E extends Iterator<T>> {
         this.iterator = iterator;
     }
 
-    public E iterator(T node) {
-        iterator.init(node);
+    public E iterator() {
         return iterator;
     }
 }

@@ -2,6 +2,7 @@ package com.tangdou.iterator;
 
 import com.tangdou.ApplicationStarter;
 import com.tangdou.iterator.container.Tree;
+import com.tangdou.iterator.iterator.BreadthFirstIterator;
 import com.tangdou.iterator.iterator.DepthFirstIterator;
 import com.tangdou.iterator.model.Node;
 import lombok.extern.slf4j.Slf4j;
@@ -38,21 +39,41 @@ public class IteratorTest {
         Node node6 = new Node(6);
         Node node7 = new Node(7);
         Node node8 = new Node(8);
-        Tree<Node, DepthFirstIterator> tree = new Tree<>(new DepthFirstIterator(), root);
-        tree.add(node2);
-        tree.add(node3);
-        tree.add(node4);
+        //深度优先
+        System.out.println("深度优先");
+        Tree<Node, DepthFirstIterator> depthFirstIteratorTree = new Tree<>(new DepthFirstIterator(root), root);
+        depthFirstIteratorTree.add(node2);
+        depthFirstIteratorTree.add(node3);
+        depthFirstIteratorTree.add(node4);
 
-        tree.addTo(node5, node2);
-        tree.addTo(node6, node2);
+        depthFirstIteratorTree.addTo(node5, node2);
+        depthFirstIteratorTree.addTo(node6, node2);
 
-        tree.addTo(node7, node3);
+        depthFirstIteratorTree.addTo(node7, node3);
 
-        tree.addTo(node8, node4);
-        DepthFirstIterator iterator = tree.iterator(root);
+        depthFirstIteratorTree.addTo(node8, node4);
+        DepthFirstIterator depthFirstIterator = depthFirstIteratorTree.iterator();
 
-        while(iterator.hasNext()){
-            System.out.println(iterator.next().getValue());
+        while(depthFirstIterator.hasNext()){
+            System.out.println(depthFirstIterator.next().getValue());
         }
+        //广度优先
+        System.out.println("广度优先");
+        Tree<Node, BreadthFirstIterator> breadthFirstIteratorTree = new Tree<>(new BreadthFirstIterator(root), root);
+        BreadthFirstIterator breadthFirstIterator = breadthFirstIteratorTree.iterator();
+
+        while(breadthFirstIterator.hasNext()){
+            System.out.println(breadthFirstIterator.next().getValue());
+        }
+    }
+
+    @Test
+    public void testRemove() {
+        Node root = new Node(1);
+        Node node2 = new Node(2);
+        Tree<Node, DepthFirstIterator> depthFirstIteratorTree = new Tree<>(new DepthFirstIterator(root), root);
+        depthFirstIteratorTree.addTo(root, node2);
+        depthFirstIteratorTree.removeFrom(node2, root);
+        depthFirstIteratorTree.remove(root);
     }
 }

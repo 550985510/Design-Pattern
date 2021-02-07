@@ -6,11 +6,11 @@ package com.tangdou.iterator.iterator;
  */
 public abstract class Iterator<T> {
 
-    /**
-     * 初始化
-     * @param node 节点
-     */
-    public abstract void init(T node);
+    protected T root;
+
+    public Iterator(T root) {
+        this.root = root;
+    }
 
     /**
      * 是否存在下一个元素
