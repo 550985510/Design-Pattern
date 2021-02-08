@@ -28,6 +28,7 @@
         <module>command-pattern</module>
         <module>iterator-pattern</module>
         <module>interpreter-pattern</module>
+        <module>mediator-pattern</module>
     </modules>
 
     <parent>

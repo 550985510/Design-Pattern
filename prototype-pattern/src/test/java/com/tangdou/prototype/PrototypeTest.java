@@ -17,8 +17,8 @@ import java.util.Map;
  * @date 2021/2/1 10:57
  */
 @Slf4j
-@SpringBootTest(classes = ApplicationStarter.class)
 @RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = ApplicationStarter.class)
 public class PrototypeTest {
 
     @Test
