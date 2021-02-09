@@ -30,6 +30,7 @@
         <module>interpreter-pattern</module>
         <module>mediator-pattern</module>
         <module>memento-pattern</module>
+        <module>observer-pattern</module>
     </modules>
 
     <parent>
