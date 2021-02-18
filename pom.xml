@@ -32,6 +32,7 @@
         <module>memento-pattern</module>
         <module>observer-pattern</module>
         <module>state-pattern</module>
+        <module>template-pattern</module>
     </modules>
 
     <parent>
