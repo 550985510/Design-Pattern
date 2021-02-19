@@ -33,6 +33,7 @@
         <module>observer-pattern</module>
         <module>state-pattern</module>
         <module>template-pattern</module>
+        <module>visitor-pattern</module>
     </modules>
 
     <parent>
