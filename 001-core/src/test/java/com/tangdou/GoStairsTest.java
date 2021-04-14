@@ -5,10 +5,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 上台阶问题（一次一阶 或 两阶）
@@ -18,7 +22,7 @@ import java.util.List;
 @Slf4j
 @SpringBootTest(classes = ApplicationStarter.class)
 @RunWith(SpringJUnit4ClassRunner.class)
-public class TestDemo {
+public class GoStairsTest {
 
 
     private final List<Integer> stepStyle = new ArrayList<Integer>();
