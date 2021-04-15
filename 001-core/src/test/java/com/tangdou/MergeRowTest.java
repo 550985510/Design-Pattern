@@ -15,7 +15,7 @@ import java.util.List;
  * 二维数组合并行
  * 只能从第一列开始合并
  * 只有前一列合并了 后一列的才能合并
- * 
+ *
  * {1, 2, 7, 1, 2, 3}
  * {1, 2, 7, 1, 7, 2}
  * {1, 4, 8, 4, 6, 5}
@@ -30,7 +30,7 @@ import java.util.List;
 @SpringBootTest(classes = ApplicationStarter.class)
 @RunWith(SpringJUnit4ClassRunner.class)
 public class MergeRowTest {
-    
+
     @Test
     public void test() {
         Integer[][] a = new Integer[][]{{1, 2, 7, 1, 2, 3}, {1, 2, 7, 1, 7, 2}, {1, 4, 8, 4, 6, 5}, {2, 4, 8, 5, 3, 4}, {2, 4, 7, 7, 6, 2}, {3, 5, 6, 1, 5, 4}, {3, 6, 5, 7, 2, 1}};
@@ -41,7 +41,7 @@ public class MergeRowTest {
         for (int col = 0; col < maxCol; col++) {
             if (col == 0) {
                 //如果是第一列
-                this.merge(map, a, maxRow, maxCol, 0, col);
+                this.merge(map, a, maxRow, 0, col);
             } else {
                 //上一列合并
                 List<Integer[]> priorMerge = map.get(col - 1);
@@ -50,14 +50,14 @@ public class MergeRowTest {
                     break;
                 }
                 for (Integer[] integers : priorMerge) {
-                    this.merge(map, a, integers[1], maxCol, integers[0], col);
+                    this.merge(map, a, integers[1], integers[0], col);
                 }
             }
         }
         log.info("");
     }
 
-    private void merge(MultiValueMap<Integer, Integer[]> map, Integer[][] a, int maxRow, int maxCol, int start, int col) {
+    private void merge(MultiValueMap<Integer, Integer[]> map, Integer[][] a, int maxRow, int start, int col) {
         //获取第一行的数据 作为比较值
         Integer flag = a[start][col];
         for (int row = start; row < maxRow; row++) {
