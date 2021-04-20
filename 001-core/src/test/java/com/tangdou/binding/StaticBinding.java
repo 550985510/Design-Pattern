@@ -27,7 +27,8 @@ public class StaticBinding {
 
     public static void main(String[] args) {
         //静态绑定 在编译时确定要执行的方法
-        //重载就是静态绑定 根据对象的表面类型决定调用哪个方法
+        //重载就是静态绑定 根据对象的静态类型决定调用哪个方法
+        //强转转的是静态类型
         Father father = new Father();
         Father son = new Son();
         Father daughter = new Daughter();

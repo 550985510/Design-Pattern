@@ -1,10 +1,12 @@
 package com.tangdou.iterator;
 
+import com.tangdou.iterator.iterator.Iterator;
+
 /**
  * @author 崔航
  * @date 2021/2/5 19:49
  */
-public class Tree<Node, E extends Iterable<E> & Iterator<Node>> extends AbstractContainer<Node, E> {
+public class Tree<Node, E extends Iterator<Node>> extends AbstractContainer<Node, E> {
 
     public Tree(E iterator) {
         super(iterator);
