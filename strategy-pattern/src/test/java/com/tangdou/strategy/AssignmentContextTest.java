@@ -1,6 +1,7 @@
 package com.tangdou.strategy;
 
 import com.tangdou.ApplicationStarter;
+import com.tangdou.strategy.spring.StrategyFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,5 +26,13 @@ public class AssignmentContextTest {
     public void test() {
         AssignmentContext context = new AssignmentContext(averageAssignmentStrategy);
         context.executeAssign();
+    }
+
+    @Resource
+    private StrategyFactory strategyFactory;
+
+    @Test
+    public void testSpring() {
+        strategyFactory.getStrategy("MINIMUM_FIRST_ASSIGNMENT").assign();
     }
 }

@@ -15,9 +15,9 @@ public enum AssignmentMethodEnum {
     AVERAGE_ASSIGNMENT(1, "平均分配"),
     MINIMUM_FIRST_ASSIGNMENT(2, "最小优先分配");
 
-    private Integer key;
+    private final Integer key;
 
-    private String desc;
+    private final String desc;
 
     AssignmentMethodEnum(Integer key, String desc) {
         this.key = key;
