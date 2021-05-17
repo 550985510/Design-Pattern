@@ -15,6 +15,6 @@ public class DataFlyweight extends AbstractFlyweight {
      */
     @Override
     public void print() {
-        System.out.println("数据享生产成功");
+        System.out.println("数据享元生产成功");
     }
 }
