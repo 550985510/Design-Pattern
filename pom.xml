@@ -9,13 +9,15 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
+        <module>001-core</module>
+        <module>002-groovy</module>
+        <module>003-future</module>
         <module>factory-pattern</module>
         <module>abstract-factory-pattern</module>
         <module>singleton-pattern</module>
         <module>builder-pattern</module>
         <module>decorator-pattern</module>
         <module>strategy-pattern</module>
-        <module>001-core</module>
         <module>builder-pattern-demo</module>
         <module>prototype-pattern</module>
         <module>adapter-pattern</module>
@@ -34,7 +36,6 @@
         <module>state-pattern</module>
         <module>template-pattern</module>
         <module>visitor-pattern</module>
-        <module>002-groovy</module>
     </modules>
 
     <parent>
